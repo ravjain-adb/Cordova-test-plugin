@@ -33,7 +33,7 @@ jobs:
         java-version: 1.8
 
     - name: Install cordova
-      run: npm install cordova
+      run: sudo npm install -g cordova
 
     - name: npm install and test
       run: |

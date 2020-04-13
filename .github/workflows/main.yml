@@ -40,5 +40,7 @@ jobs:
         npm i
 
     - name: build android and ios
-      run: cordova build
+      run: |
+        pwd
+        cordova build
       

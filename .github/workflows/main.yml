@@ -35,12 +35,15 @@ jobs:
     - name: Install cordova
       run: sudo npm install -g cordova
 
+    - name: Install cordova paramedic
+      run: sudo npm install -g cordova-paramedic
+
     - name: npm install and test
       run: |
         npm i
 
     - name: build android and ios
       run: |
-        pwd
-        cordova build
+        cordova-paramedic --platform android --plugin . --justbuild
+        cordova-paramedic --platform ios --plugin . --justbuild
       
